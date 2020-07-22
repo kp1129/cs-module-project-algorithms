@@ -4,8 +4,16 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    temp = []
+    doubles = []
+    for i in arr:
+        if i not in temp:
+            temp.append(i)
+        elif i in temp:
+            temp.pop(temp.index(i))
+            doubles.append(i)
+    
+    return temp[0]
 
 
 if __name__ == '__main__':
