@@ -26,7 +26,6 @@ def product_of_all_other_numbers(arr):
     for i in range(0, len(arr)):
         my_list = list(arr)
         my_list.pop(i)
-        print(my_list)
         counter = 1
         for each in my_list:
             counter *= each
