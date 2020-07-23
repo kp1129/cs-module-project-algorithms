@@ -8,17 +8,11 @@ def eating_cookies(n):
     if n < 0 :
         return 0
     elif n == 0 or n == 1:
-        # counter.append(1)
-        # print(type(counter)) 
         return 1
     elif n == 2:
-        # counter.append(2)
-        # print(counter) 
         return 2
-    # elif n == 3:
-    #     # counter.append(4)
-    #     # print(type(counter)) 
-    #     return 3
+    elif n == 3: 
+        return 4
     else:
         return eating_cookies(n-3) + eating_cookies(n-2) + eating_cookies(n-1)
 
