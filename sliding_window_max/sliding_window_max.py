@@ -4,8 +4,32 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    # iterate over the array
+    # grab slices of length k at a time,
+    # moving up by one
 
-    pass
+    # compare elements in each slice to each other
+    # grab the max value element
+    # save it in a separate list
+
+    # return the list of max values
+
+    max_values = []
+
+    sliding = True
+    start = 0
+
+    while sliding:
+        end = start + k
+        my_slice = nums[start: end]
+        my_max = max(my_slice)
+        max_values.append(my_max)
+        if end + 1 <= len(nums):
+            start += 1
+        else:
+            sliding = False    
+
+    return max_values
 
 
 if __name__ == '__main__':
